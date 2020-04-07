@@ -1,0 +1,39 @@
+<%- include("partials/header") %>
+
+<header class="jumbotron text-center">
+    <% data.results.forEach(function (result) { %>
+        <%if(result.place_type === "state") { %>
+            <h1 class="display-1"><%= result.confirmed %></h1>
+            <p class="lead">Casos Confirmados</p>
+            <p class="lead"><%= result.deaths %> Mortes</p>
+            <span class="lead"><%=result.date %></span>
+        <%}%>
+    <% }); %> 
+</header>
+
+<section class="container-fluid table-responsive">
+    <table class="table table-md table-striped table-hover">
+        <thead class="thead-dark">
+            <th scope="col">Cidade</th>
+            <th scope="col">Casos Confirmados</th>
+            <th scope="col">Mortes</th>
+            <th scope="col">Data</th>
+        </thead>
+        <tbody>
+            <% data.results.forEach( function (result){ %>
+                <% if(result.place_type === "city"){ %>
+                    <tr>
+                        <td><%= result.city %></td>
+                        <td><%= result.confirmed %></td>
+                        <td><%= result.deaths %></td>
+                        <td><%= result.date%></td>
+                    </tr>
+                <% } %>
+            <% }); %>
+        </tbody>
+    </table>
+    <div>
+        <p class="lead text-center">Fonte: Secretarias de Saúde das Unidades Federativas, dados tratados por <a href="https://twitter.com/turicas" target="_blank">Álvaro Justen</a> e <a href="https://brasil.io/contribuidores" target="_blank">colaboradores</a>/<a href="http://brasil.io" target="_blank">Brasil.IO</a>.</p>
+    </div>
+</section>
+<%- include("partials/footer") %>

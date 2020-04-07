@@ -1,0 +1,8 @@
+html, body {
+    padding: 0 auto;
+    margin: 0 auto;
+}
+
+.bg-none {
+    background: none;
+}

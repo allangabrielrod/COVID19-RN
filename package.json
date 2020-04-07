@@ -1,0 +1,25 @@
+{
+  "name": "covid19-rn",
+  "version": "1.0.0",
+  "description": "App feito para contabilizar os casos de covid-19 no estado do RN",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Allan Gabriel",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allangabrielrod/COVID19-RN.git"
+  },
+  "bugs": {
+    "url": "https://github.com/allangabrielrod/COVID19-RN/issues"
+  },
+  "homepage": "https://github.com/allangabrielrod/COVID19-RN#readme"
+}
