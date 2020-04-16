@@ -23,6 +23,6 @@ app.get("*", function(req,res) {
     res.render("pages/notfound");
 });
 
-app.listen(3000, function (){
-    console.log("Listening at 3000.");
+app.listen(process.env.PORT, function (){
+    console.log("Listening at " + process.env.PORT);
 });
