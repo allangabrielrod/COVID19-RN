@@ -1,6 +1,6 @@
 {
   "name": "covid19-rn",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "App feito para contabilizar os casos de covid-19 no estado do RN",
   "main": "app.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "author": "Allan Gabriel, Jhonata Caio",
   "license": "ISC",
   "dependencies": {
+    "chart.js": "^2.9.3",
     "ejs": "^3.0.2",
     "express": "^4.17.1",
     "request": "^2.88.2"

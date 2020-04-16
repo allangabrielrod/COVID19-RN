@@ -1,7 +1,7 @@
-<%- include("partials/header") %>
+<%- include("../partials/header") %>
 
 <header class="jumbotron text-center">
-    <% data.results.forEach(function (result) { %>
+    <% data.results.forEach(result => { %>
         <%if(result.place_type === "state") { %>
             <h1 class="display-1"><%= result.confirmed %></h1>
             <p class="lead">Casos Confirmados</p>
@@ -36,4 +36,4 @@
         <p class="lead text-center">Fonte: Secretarias de Saúde das Unidades Federativas, dados tratados por <a href="https://twitter.com/turicas" target="_blank">Álvaro Justen</a> e <a href="https://brasil.io/contribuidores" target="_blank">colaboradores</a>/<a href="http://brasil.io" target="_blank">Brasil.IO</a>.</p>
     </div>
 </section>
-<%- include("partials/footer") %>
+<%- include("../partials/footer") %>
