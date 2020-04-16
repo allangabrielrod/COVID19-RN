@@ -1,6 +1,6 @@
 {
   "name": "covid19-rn",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "App feito para contabilizar os casos de covid-19 no estado do RN",
   "main": "app.js",
   "scripts": {
