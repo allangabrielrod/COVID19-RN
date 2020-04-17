@@ -23,6 +23,22 @@ app.get("/inicio", function(req, res) {
     });
 });
 
+//https://brasil.io/api/dataset/covid19/caso/data?state=RN
+app.get("/charts", function(req, res) {
+    request.get("https://brasil.io/api/dataset/covid19/caso/data?format=json&is_last=True&state=RN", function (err, resp, body) {
+        if (err) {
+            console.log("something went wrong :/");
+        } else {
+            request.get("https://brasil.io/api/dataset/covid19/caso/data?state=RN&place_type=state", function (err, resp, body2) {
+                res.render("pages/charts", { 
+                        data: JSON.parse(body),
+                        timeData: JSON.parse(body2) 
+                    });
+            });
+        }
+    });
+});
+
 app.get("*", function(req,res) {
     res.render("pages/notfound");
 });
