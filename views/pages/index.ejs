@@ -17,7 +17,7 @@
             <th scope="col">Cidade</th>
             <th scope="col">Casos Confirmados</th>
             <th scope="col">Mortes</th>
-            <th scope="col">Data</th>
+            <th scope="col" class="d-none d-md-table-cell">Data</th>
         </thead>
         <tbody>
             <% data.results.forEach( function (result){ %>
@@ -26,7 +26,7 @@
                         <td><%= result.city %></td>
                         <td><%= result.confirmed %></td>
                         <td><%= result.deaths %></td>
-                        <td><%= result.date%></td>
+                        <td class="d-none d-md-table-cell"><%= result.date%></td>
                     </tr>
                 <% } %>
             <% }); %>
@@ -36,4 +36,6 @@
         <p class="lead text-center">Fonte: Secretarias de Saúde das Unidades Federativas, dados tratados por <a href="https://twitter.com/turicas" target="_blank">Álvaro Justen</a> e <a href="https://brasil.io/contribuidores" target="_blank">colaboradores</a>/<a href="http://brasil.io" target="_blank">Brasil.IO</a>.</p>
     </div>
 </section>
+
+<%- include("../partials/scripts") %>
 <%- include("../partials/footer") %>
