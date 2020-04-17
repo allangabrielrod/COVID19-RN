@@ -23,17 +23,6 @@ app.get("/inicio", function(req, res) {
     });
 });
 
-// ROTA TESTE
-app.get("/charts", function (req, res) {
-    request.get("https://brasil.io/api/dataset/covid19/caso/data?format=json&is_last=True&state=RN", function (err, resp, body) {
-        if (err) {
-            console.log("something went wrong :/");
-        } else {
-            res.render("test/charts", { data: JSON.parse(body) });
-        }
-    });
-});
-
 app.get("*", function(req,res) {
     res.render("pages/notfound");
 });
