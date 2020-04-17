@@ -6,3 +6,27 @@ html, body {
 .bg-none {
     background: none;
 }
+
+header{
+
+    height: 50px;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: darkblue;
+
+}
+header nav{
+    height: 100%;
+}
+
+footer{
+    height: 50px;
+    background-color: darkgreen;
+    text-align: center;
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: darkblue;
+}
+footer p{
+    vertical-align: center;
+}
