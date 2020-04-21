@@ -1,6 +1,8 @@
 var ctx = document.getElementById("testChart");
 var ctx2 = document.getElementById("testChart2");
 
+moment.locale("pt-BR");
+
 var chartData = {
     labels: [],
     datasets: [{
@@ -42,7 +44,13 @@ dados.sort(function (x, y) {
 });
 
 dados2.sort(function (x, y) {
-    return x.confirmed - y.confirmed;
+    if(x.date < y.date) {
+        return -1;
+    } else if (x.date > y.date) {
+        return 1;
+    } else {
+        return 0;
+    }
 });
 
 dados.forEach(function (item) {
@@ -54,7 +62,7 @@ dados.forEach(function (item) {
 });
 
 dados2.forEach(function (item, i) {
-    chartData2.labels.push(item.date);
+    chartData2.labels.push(moment(item.date).format("L"));
     chartData2.datasets[0].data.push(item.confirmed);
     chartData2.datasets[1].data.push(item.deaths);
 });
