@@ -7,6 +7,10 @@
 	color: white;
 }
 
+.datatable thead th {
+	font-weight: 400;
+}
+
 @media (min-width: 768px) {
 	.datatable {
 		width: 80%;
