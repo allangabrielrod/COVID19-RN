@@ -15,8 +15,7 @@ app.use(express.static("./node_modules/popper.js/"));
 
 //Routes
 app.use("/", index);
-//Nao funciona com duas rotas
-// app.use("/noticias", noticias);
+app.use("/", noticias);
 
 //Server Start
 app.listen(process.env.PORT || 3000, () => {
