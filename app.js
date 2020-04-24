@@ -14,7 +14,7 @@ app.use(express.static("./node_modules/chart.js/"));
 app.use(express.static("./node_modules/popper.js/"));
 
 //Routes
-app.use("/", index).use("/noticias", noticias);
+app.use("/", index);
 //Nao funciona com duas rotas
 // app.use("/noticias", noticias);
 

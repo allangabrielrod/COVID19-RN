@@ -5,7 +5,6 @@ const express = require("express"),
 
 router.get("/noticias", function (req, res) {
   twitter.getTweets().then((tweets) => {
-    // console.log(tweets);
     res.render("pages/noticias", { data: tweets });
   });
 });
@@ -50,7 +49,6 @@ router.get("/charts", (req, res) => {
 });
 
 router.get("*", (req, res) => {
-  console.log("TTTTTT");
   res.render("pages/notfound");
 });
 
