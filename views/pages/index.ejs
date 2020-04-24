@@ -22,27 +22,29 @@
 	</section>
 
 	<section class="datatable container-fluid table-responsive">
-		<table class="table table-md table-striped table-hover text-center">
-			<thead class="thead">
-				<th scope="col">Cidade</th>
-				<th scope="col">Casos Confirmados</th>
-				<th scope="col">Mortes</th>
-				<th scope="col" class="d-none d-md-table-cell">Data</th>
-			</thead>
-			<tbody>
-				<% data.results.forEach(function (result){ %> <% if(result.place_type
-				=== "city"){ %>
-				<tr>
-					<td><%= result.city %></td>
-					<td><%= result.confirmed %></td>
-					<td><%= result.deaths %></td>
-					<td class="d-none d-md-table-cell date">
-						<time><%= result.date %></time>
-					</td>
-				</tr>
-				<% } %> <% }); %>
-			</tbody>
-		</table>
+		<div>
+			<table class="table table-md table-striped table-hover text-center">
+				<thead class="thead">
+					<th scope="col">Cidade</th>
+					<th scope="col">Casos Confirmados</th>
+					<th scope="col">Mortes</th>
+					<th scope="col" class="d-none d-md-table-cell">Data</th>
+				</thead>
+				<tbody>
+					<% data.results.forEach(function (result){ %> <% if(result.place_type
+					=== "city"){ %>
+					<tr>
+						<td><%= result.city %></td>
+						<td><%= result.confirmed %></td>
+						<td><%= result.deaths %></td>
+						<td class="d-none d-md-table-cell date">
+							<time><%= result.date %></time>
+						</td>
+					</tr>
+					<% } %> <% }); %>
+				</tbody>
+			</table>
+		</div>
 	</section>
 </main>
 

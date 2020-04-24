@@ -2,6 +2,10 @@
 	margin: auto;
 }
 
+.datatable > div {
+	overflow-x: scroll;
+}
+
 .datatable thead {
 	background-color: #0a8705;
 	color: white;
@@ -9,10 +13,18 @@
 
 .datatable thead th {
 	font-weight: 400;
+	white-space: nowrap;
+}
+
+@media (min-width: 576px) {
+	.datatable > div {
+		overflow-x: none;
+	}
 }
 
 @media (min-width: 768px) {
 	.datatable {
+		overflow-x: none;
 		width: 80%;
 	}
 }
