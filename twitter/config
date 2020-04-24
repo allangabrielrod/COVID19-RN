@@ -1,0 +1,14 @@
+// {
+//   'consumer_key':'QY7MSari48vis6baRBt6eEbTT',
+//   'consumer_secret':'A9aDa0ztStrzg6lqgPMIOvX2oLnprHMepRJACAA7h6ikg8OwrE',
+//   'access_token':'65379359-xQjgUyPbI3GCo7T0ReUhchU7lkvDRPWJnFWviyEK9',
+//   'access_token_secret':'Y3CwQgP3fCCj1uSgysYY4CwthibSPtXibOyVJTbEnLxw7',
+//   timeout_ms:60*1000,  // optional HTTP request timeout to apply to all requests.
+//   strictSSL:true,     // optional - requires SSL certificates to be valid.
+// }
+{
+  consumer_key: "QY7MSari48vis6baRBt6eEbTT",
+  consumer_secret: "A9aDa0ztStrzg6lqgPMIOvX2oLnprHMepRJACAA7h6ikg8OwrE",
+  access_token:'65379359-xQjgUyPbI3GCo7T0ReUhchU7lkvDRPWJnFWviyEK9',
+  access_token_secret:'Y3CwQgP3fCCj1uSgysYY4CwthibSPtXibOyVJTbEnLxw7',
+}
