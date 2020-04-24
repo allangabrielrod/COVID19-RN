@@ -3,11 +3,13 @@
   <h1>Notícias</h1>
 </header>
 
-<section class="container-fluid table-responsive">
-  <table class="table table-md table-striped table-hover">
+<section class="container-fluid">
+  <table
+    class="table table-responsive table-striped table-hover w-auto text-xsmall"
+  >
     <thead class="thead-dark">
-      <th scope="col">Data</th>
-      <th scope="col">Jornal</th>
+      <th scope="col" class="d-none d-sm-table-cell">Data</th>
+      <th scope="col" class="d-none d-sm-table-cell">Jornal</th>
       <th scope="col">Noticia</th>
       <th scope="col">Link</th>
       <!--<th scope="col" class="d-none d-md-table-cell">Data</th> -->
@@ -15,8 +17,8 @@
     <tbody>
       <% data.forEach( function (result){ %>
       <tr>
-        <td>📅 <%= result.data %></td>
-        <td><%= result.user %></td>
+        <td class="d-none d-sm-table-cell"><%= result.data %></td>
+        <td class="d-none d-sm-table-cell"><%= result.user %></td>
         <td><%= result.texto %></td>
         <td>
           <a href="<%= result.url %>" target="_blank"><%= result.url %></a>
