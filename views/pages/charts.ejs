@@ -1,0 +1,14 @@
+<%- include("../partials/header") %>
+
+<canvas id="testChart" width="150" height="45"></canvas>
+
+<canvas id="testChart2" width="150" height="45"></canvas>
+
+<script>
+    var dados = <%- JSON.stringify(data.results) %>;
+    var dados2 = <%- JSON.stringify(timeData.results) %>;
+</script>
+
+<%- include("../partials/footer") %>
+<%- include("../partials/scripts") %>
+<script src="/js/charts.js"></script>
