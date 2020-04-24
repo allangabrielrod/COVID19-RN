@@ -1,7 +1,7 @@
-const express = require("express"),
-  app = express(),
-  noticias = require("./routes/noticias"),
-  index = require("./routes/index");
+const express  = require("express"),
+      app      = express(),
+      noticias = require("./routes/noticias"),
+      index    = require("./routes/index");
 
 app.set("view engine", "ejs");
 
@@ -19,6 +19,6 @@ app.use("/", index).use("/noticias", noticias);
 // app.use("/noticias", noticias);
 
 //Server Start
-app.listen(3000, () => {
-  console.log("Listening at " + 3000);
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Server started...");
 });
