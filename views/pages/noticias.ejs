@@ -1,0 +1,28 @@
+<%- include("../partials/header") %>
+<header class="jumbotron text-center">
+  <h1>Notícias</h1>
+</header>
+
+<section class="container-fluid table-responsive">
+  <table class="table table-md table-striped table-hover">
+    <thead class="thead-dark">
+      <th scope="col">Data</th>
+      <th scope="col">Jornal</th>
+      <th scope="col">Noticia</th>
+      <th scope="col">Link</th>
+      <!--<th scope="col" class="d-none d-md-table-cell">Data</th> -->
+    </thead>
+    <tbody>
+      <% data.forEach( function (result){ %>
+      <tr>
+        <td>📅 <%= result.data %></td>
+        <td><%= result.user %></td>
+        <td><%= result.texto %></td>
+        <td>
+          <a href="<%= result.url %>" target="_blank"><%= result.url %></a>
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</section>
