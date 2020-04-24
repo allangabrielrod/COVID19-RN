@@ -1,0 +1,14 @@
+.datatable {
+	margin: auto;
+}
+
+.datatable thead {
+	background-color: #0a8705;
+	color: white;
+}
+
+@media (min-width: 768px) {
+	.datatable {
+		width: 80%;
+	}
+}

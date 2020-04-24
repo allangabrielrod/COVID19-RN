@@ -1,14 +1,15 @@
 <%- include("../partials/header") %>
 
-<div class="container-fluid text-dark h-100 bg-light">
-    <div class="row">
-        <section class="col-md-12 jumbotron rounded-0 text-center align-middle bg-light">
-            <h1 class="display-1">Página não encontrada :/</h1>
-            <p class="lead">Clique no botão abaixo para ser redirecionado</p>
-            <a href="/inicio" class="btn btn-lg text-light" style="background-color: darkgreen;">Inicio</a>
-        </section>
-    </div>
-</div>
+<main
+	class="container-fluid text-dark h-100 bg-light d-flex align-center bg-custom"
+>
+	<section class="jumbotron rounded-0 text-center align-middle bg-light m-auto">
+		<h1 class="display-1">Página não encontrada :/</h1>
+		<p class="lead">Clique no botão abaixo para ser redirecionado</p>
+		<a href="/inicio" class="btn btn-lg text-light bg-custom">
+			Inicio
+		</a>
+	</section>
+</main>
 
-<%- include("../partials/scripts") %>
-<%- include("../partials/footer") %>
+<%- include("../partials/scripts") %> <%- include("../partials/footer") %>

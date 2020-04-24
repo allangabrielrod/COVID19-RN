@@ -1,38 +1,40 @@
 <%- include("../partials/header") %>
 
-<section class="jumbotron text-center bg-light">
-    <% data.results.forEach(result => { %>
-        <%if(result.place_type === "state") { %>
-            <h1 class="display-1"><%= result.confirmed %></h1>
-            <p class="lead">Casos Confirmados</p>
-            <p class="lead"><%= result.deaths %> Mortes</p>
-            <span class="lead date"><%=result.date %></span>
-        <%}%>
-    <% }); %> 
-</section>
+<main>
+	<section class="jumbotron text-center bg-light">
+		<% data.results.forEach(result => { %> <%if(result.place_type === "state")
+		{%>
+		<h2 class="display-1"><%= result.confirmed %></h2>
+		<h2 class="lead">Casos Confirmados</h2>
+		<h3 class="lead my-3"><%= result.deaths %> Mortes</h3>
+		<time class="lead date"><%=result.date %></time>
+		<%}%> <% }); %>
+	</section>
 
-<section class="container-fluid table-responsive" style = "width: 80%; margin: auto auto;">
-    <table class="table table-md table-striped table-hover"style="text-align: center">
-        <thead class="thead" style="background-color: #0a8705; color: white;">
-            <th scope="col">Cidade</th>
-            <th scope="col">Casos Confirmados</th>
-            <th scope="col">Mortes</th>
-            <th scope="col"class="d-none d-md-table-cell">Data</th>
-        </thead>
-        <tbody>
-            <% data.results.forEach(function (result){ %>
-                <% if(result.place_type === "city"){ %>
-                    <tr>
-                        <td><%= result.city %></td>
-                        <td><%= result.confirmed %></td>
-                        <td><%= result.deaths %></td>
-                        <td class="d-none d-md-table-cell date"><%= result.date %></td>
-                    </tr>
-                <% } %>
-            <% }); %>
-        </tbody>
-    </table>
-</section>
-<%- include("../partials/footer") %>
-<%- include("../partials/scripts") %>
+	<section class="datatable container-fluid table-responsive">
+		<table class="table table-md table-striped table-hover text-center">
+			<thead class="thead">
+				<th scope="col">Cidade</th>
+				<th scope="col">Casos Confirmados</th>
+				<th scope="col">Mortes</th>
+				<th scope="col" class="d-none d-md-table-cell">Data</th>
+			</thead>
+			<tbody>
+				<% data.results.forEach(function (result){ %> <% if(result.place_type
+				=== "city"){ %>
+				<tr>
+					<td><%= result.city %></td>
+					<td><%= result.confirmed %></td>
+					<td><%= result.deaths %></td>
+					<td class="d-none d-md-table-cell date">
+						<time><%= result.date %></time>
+					</td>
+				</tr>
+				<% } %> <% }); %>
+			</tbody>
+		</table>
+	</section>
+</main>
+
+<%- include("../partials/footer") %> <%- include("../partials/scripts") %>
 <script src="/js/index.js"></script>
