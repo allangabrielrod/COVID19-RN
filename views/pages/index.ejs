@@ -4,10 +4,20 @@
 	<section class="jumbotron text-center bg-light">
 		<% data.results.forEach(result => { %> <%if(result.place_type === "state")
 		{%>
-		<h2 class="display-1"><%= result.confirmed %></h2>
-		<h2 class="lead">Casos Confirmados</h2>
-		<h3 class="lead my-3"><%= result.deaths %> Mortes</h3>
-		<time class="lead date"><%=result.date %></time>
+
+		<div class="row m-0">
+			<div class="col-md-6">
+				<h2 class="display-1"><%= result.confirmed %></h2>
+				<h3 class="lead">Casos Confirmados</h3>
+			</div>
+
+			<div class="col-md-6 mt-4 mt-md-0">
+				<h2 class="display-1"><%= result.deaths %></h2>
+				<h3 class="lead">Mortes</h3>
+			</div>
+
+			<time class="lead date col-12 mt-5"><%=result.date %></time>
+		</div>
 		<%}%> <% }); %>
 	</section>
 
