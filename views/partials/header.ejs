@@ -1,47 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>COVID19 RN</title>
-		<link rel="stylesheet" href="/css/reset.css" />
-		<link rel="stylesheet" href="/dist/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="/css/style.css" />
-		<link rel="stylesheet" href="/css/block/datatable.css" />
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-164523330-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-164523330-1");
+    </script>
 
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
-		/>
-	</head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COVID19 RN | <%= title %></title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/block/datatable.css" /> 
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+    />
+  </head>
 
-	<header class="header bg-custom">
-		<div class="container">
-			<nav class="navbar navbar-expand-md navbar-dark">
-				<a class="navbar-brand" href="#">COVID19 RN</a>
-				<button
-					class="navbar-toggler"
-					type="button"
-					data-toggle="collapse"
-					data-target="#navbarNavAltMarkup"
-					aria-controls="navbarNavAltMarkup"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span class="navbar-toggler-icon"></span>
-				</button>
+  <header class="header bg-custom">
+    <div class="container">
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="/"><i class="fas fa-virus"></i>COVID19 RN</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-					<ul class="navbar-nav ml-auto justify-content-end">
-						<a class="nav-item nav-link active" href="/inicio">
-							Inicio<span class="sr-only">(current)</span>
-						</a>
-						<a class="nav-item nav-link active" href="/sobre">
-							Sobre<span class="sr-only">(current)</span>
-						</a>
-					</ul>
-				</div>
-			</nav>
-		</div>
-	</header>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav ml-auto justify-content-end">
+            <a class="nav-item nav-link active" href="/inicio">
+              Inicio<span class="sr-only">(current)</span>
+            </a>
+            <a class="nav-item nav-link active" href="/graficos">
+              Gráficos<span class="sr-only">(current)</span>
+            </a>
+            <a class="nav-item nav-link active" href="/noticias">
+              Notícias<span class="sr-only">(current)</span>
+            </a>
+            <a class="nav-item nav-link active" href="/sobre">
+              Sobre<span class="sr-only">(current)</span>
+            </a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
 </html>

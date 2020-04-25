@@ -1,7 +1,7 @@
 const express = require("express"),
-  router = express.Router({ mergeParams: true }),
-  request = require("request");
-twitter = require("../twitter/twitter-consumer");
+      router  = express.Router({ mergeParams: true }),
+      request = require("request"),
+      twitter = require("../twitter/twitter-consumer");
 
 router.get("/noticias", function (req, res) {
   twitter.getTweets().then((tweets) => {
@@ -27,16 +27,16 @@ router.get("/inicio", (req, res) => {
 });
 
 //https://brasil.io/api/dataset/covid19/caso/data?state=RN
-router.get("/charts", (req, res) => {
+router.get("/graficos", (req, res) => {
   request.get(
     "https://brasil.io/api/dataset/covid19/caso/data?format=json&is_last=True&state=RN",
-    function (err, resp, body) {
+    (err, resp, body) => {
       if (err) {
         console.log("something went wrong :/");
       } else {
         request.get(
           "https://brasil.io/api/dataset/covid19/caso/data?state=RN&place_type=state",
-          function (err, resp, body2) {
+          (err, resp, body2) => {
             res.render("pages/charts", {
               data: JSON.parse(body),
               timeData: JSON.parse(body2),

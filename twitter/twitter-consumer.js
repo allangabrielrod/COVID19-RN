@@ -23,11 +23,12 @@ exports.getTweets = function () {
           data = moment(tweet.created_at).format("DD/MM/YYYY");
           hora = moment(tweet.created_at).format("h:mm");
           url = tweet.text.split("//")[1];
+          texto = tweet.text.split("https://")[0];
           return {
             data: data,
             hora: hora,
             user: tweet.user.name,
-            texto: tweet.text,
+            texto: texto,
             url: "https://" + url,
           };
         });
