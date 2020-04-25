@@ -1,4 +1,4 @@
-<%- include("../partials/header") %>
+<%- include("../partials/header", {title: "Inicio"}) %>
 
 <main>
 	<section class="jumbotron text-center bg-light">
@@ -15,7 +15,6 @@
 				<h2 class="display-1"><%= result.deaths %></h2>
 				<h3 class="lead">Mortes</h3>
 			</div>
-
 			<time class="lead date col-12 mt-5"><%=result.date %></time>
 		</div>
 		<%}%> <% }); %>
