@@ -6,7 +6,6 @@ router.get("/", (req, res) => {
   twitter.getTweets().then((tweets) => {
     res.render("pages/noticias", { data: tweets });
   });
-  //
 });
 
 router.get("*", (req, res) => {

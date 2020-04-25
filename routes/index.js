@@ -1,6 +1,7 @@
 const express = require("express"),
   router = express.Router({ mergeParams: true }),
-  request = require("request");
+  request = require("request"),
+  twitter = require("../twitter/twitter-consumer");
 
 router.get("/", (req, res) => {
   res.redirect("/inicio");
@@ -39,6 +40,16 @@ router.get("/graficos", (req, res) => {
       }
     }
   );
+});
+
+router.get("/noticias", (req, res) => {
+  twitter.getTweets().then((tweets) => {
+    res.render("pages/noticias", { data: tweets });
+  });
+});
+
+router.get("/sobre", (req, res) => {
+  res.render("pages/sobre");
 });
 
 router.get("*", (req, res) => {
