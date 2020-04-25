@@ -1,13 +1,6 @@
 const express = require("express"),
-      router  = express.Router({ mergeParams: true }),
-      request = require("request"),
-      twitter = require("../twitter/twitter-consumer");
-
-router.get("/noticias", function (req, res) {
-  twitter.getTweets().then((tweets) => {
-    res.render("pages/noticias", { data: tweets });
-  });
-});
+  router = express.Router({ mergeParams: true }),
+  request = require("request");
 
 router.get("/", (req, res) => {
   res.redirect("/inicio");
