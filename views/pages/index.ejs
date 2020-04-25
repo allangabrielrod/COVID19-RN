@@ -6,16 +6,32 @@
 		{%>
 
 		<div class="row m-0">
-			<div class="col-md-6">
-				<h2 class="display-1"><%= result.confirmed %></h2>
+			<div class="col-md-4">
+				<h2 class="display-3"><%= result.confirmed %></h2>
 				<h3 class="lead">Casos Confirmados</h3>
 			</div>
 
-			<div class="col-md-6 mt-4 mt-md-0">
-				<h2 class="display-1"><%= result.deaths %></h2>
+			<div class="col-md-4 mt-4 mt-md-0">
+				<h2 class="display-3"><%= result.deaths %></h2>
 				<h3 class="lead">Mortes</h3>
 			</div>
-			<time class="lead date col-12 mt-5"><%=result.date %></time>
+			<div class="col-md-4 mt-4 mt-md-0">
+				<h2 class="display-3">
+					<time class="date"><%=result.date %></time>
+				</h2>
+				<h3 class="lead">Ultima atualização</h3>
+			</div>
+			<div class="col-12 mt-4 pt-5 justify-content-center">
+				<h6 class="display-6 font-weight-bolder">Compartilhe</h6>
+				<ul class="share-buttons">
+					<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcovid19-rn.herokuapp.com%2F&quote=Covid%2019%20RN"
+							title="Share on Facebook" target="_blank"><img alt="Share on Facebook"
+								src="images/social_flat_rounded_rects_svg/Facebook.svg" /></a></li>
+					<li><a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fcovid19-rn.herokuapp.com%2F&text=Covid%2019%20RN:%20https%3A%2F%2Fcovid19-rn.herokuapp.com%2F"
+							target="_blank" title="Tweet"><img alt="Tweet" src="images/social_flat_rounded_rects_svg/Twitter.svg" /></a>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<%}%> <% }); %>
 	</section>
