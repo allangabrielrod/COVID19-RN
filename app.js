@@ -1,7 +1,8 @@
-const express  = require("express"),
-      app      = express(),
-      noticias = require("./routes/noticias"),
-      index    = require("./routes/index");
+const express = require("express"),
+  app = express(),
+  noticias = require("./routes/noticias"),
+  index = require("./routes/index"),
+  sobre = require("/routes/sobre");
 
 app.set("view engine", "ejs");
 
@@ -16,6 +17,7 @@ app.use(express.static("./node_modules/popper.js/"));
 //Routes
 app.use("/", index);
 app.use("/", noticias);
+app.use("/", sobre);
 
 //Server Start
 app.listen(process.env.PORT || 3000, () => {
