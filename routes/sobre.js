@@ -8,3 +8,5 @@ router.get("/sobre", (req, res) => {
 router.get("*", (req, res) => {
   res.render("pages/notfound");
 });
+
+module.exports = router;
