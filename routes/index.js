@@ -20,7 +20,6 @@ router.get("/inicio", (req, res) => {
   );
 });
 
-//https://brasil.io/api/dataset/covid19/caso/data?state=RN
 router.get("/graficos", (req, res) => {
   request.get(
     "https://brasil.io/api/dataset/covid19/caso/data?format=json&is_last=True&state=RN",

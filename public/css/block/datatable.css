@@ -1,29 +1,29 @@
-.datatable {
+.table {
 	margin: auto;
 }
 
-.datatable > div {
+.table > div {
 	overflow-x: scroll;
 }
 
-.datatable thead {
+.table thead {
 	background-color: #0a8705;
 	color: white;
 }
 
-.datatable thead th {
+.table thead th {
 	font-weight: 400;
 	white-space: nowrap;
 }
 
 @media (min-width: 576px) {
-	.datatable > div {
+	.table > div {
 		overflow-x: none;
 	}
 }
 
 @media (min-width: 768px) {
-	.datatable {
+	.table {
 		overflow-x: none;
 		width: 80%;
 	}
