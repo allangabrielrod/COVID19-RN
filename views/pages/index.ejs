@@ -94,7 +94,7 @@
               <% if(!result.death_rate){%>
                   0
               <% }else{ %>
-                <%=(result.death_rate*100).toFixed(2)%>
+                <%= Math.round(result.death_rate * 10000) / 100 %>
               <% } %>
                   %
             </td>
