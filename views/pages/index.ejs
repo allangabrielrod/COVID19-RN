@@ -69,7 +69,7 @@
           <th scope="col">Cidade</th>
           <th scope="col">Casos Confirmados</th>
           <th scope="col">Mortes</th>
-          <th scope="col" class="d-none d-md-table-cell">Data</th>
+          <th scope="col" class="d-none d-md-table-cell">Taxa de Mortalidade</th>
         </thead>
         <tbody>
           <% data.results.forEach(function (result){ %> <% if(result.place_type
@@ -78,8 +78,13 @@
             <td><%= result.city %></td>
             <td><%= result.confirmed %></td>
             <td><%= result.deaths %></td>
-            <td class="d-none d-md-table-cell date">
-              <time><%= result.date %></time>
+            <td>
+              <% if(result.death_rate == null){%>
+                0
+              <% }else{ %>
+                <%=Math.round(result.death_rate.toFixed(4)*10000)/100%>
+              <% } %>
+              %
             </td>
           </tr>
           <% } %> <% }); %>
