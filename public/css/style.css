@@ -65,6 +65,12 @@ a:focus {
 	}
 }
 
+@media (max-width: 540px) {
+	.display-1 {
+		font-size: 4rem;
+	}
+}
+
 ul.share-buttons{
   list-style: none;
   padding: 0;
