@@ -81,7 +81,7 @@
           <th scope="col" id="cidade" data-sortable="true" data-field="cidade">Cidade</th>
           <th scope="col" id="casos" data-sortable="true" data-field="casos" data-sort-order="desc">Casos Confirmados</th>
           <th scope="col" id="mortes" data-sortable="true" data-field="mortes" data-sort-order="desc">Mortes</th>
-         <!-- <th scope="col" id="data" data-sortable="true" data-field="data" class="d-none d-md-table-cell">Data</th>-->
+          <th scope="col" class="d-none d-md-table-cell" id="mortalidade" data-sortable="true" data-field="mortalidade" data-sort-order="desc">Taxa de Mortalidade (%)</th>
         </thead>
         <tbody>
           <% data.results.forEach(function (result){ %> <% if(result.place_type
@@ -90,9 +90,13 @@
             <td><%= result.city %></td>
             <td><%= result.confirmed %></td>
             <td><%= result.deaths %></td>
-          <!--  <td class="d-none d-md-table-cell date">
-              <time><%= result.date %></time>
-            </td>-->
+            <td>
+              <% if(!result.death_rate){%>
+                  0
+              <% }else{ %>
+                <%= Math.round(result.death_rate * 10000) / 100 %>
+              <% } %>
+            </td>
           </tr>
           <% } %> <% }); %>
         </tbody>
