@@ -82,6 +82,8 @@
               <% if(result.death_rate == null){%>
                 0
               <% }else{ %>
+                <%#as cidades de natal e mossoro, ao usar o toFixed(2), a taxa de mortalidade n se limitava a 2 casas decimais%>
+                <%#entao, deixo esse comentario para se alguem chegar a ver, essa pessoa tente ver essa estranha ocorrencia%>
                 <%=Math.round(result.death_rate.toFixed(4)*10000)/100%>
               <% } %>
               %
