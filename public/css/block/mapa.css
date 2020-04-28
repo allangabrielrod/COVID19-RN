@@ -1,0 +1,40 @@
+#mapa svg {
+  display: block;
+  fill-rule: evenodd;
+  height: calc(62vw - 2rem);
+  image-rendering: optimizeQuality;
+  margin: auto;
+  max-height: 615px;
+  max-width: 992px;
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
+  width: calc(100vw - 2rem);
+}
+
+#mapa svg path {
+  fill: #fff;
+  stroke: #646464;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-opacity: 1;
+  stroke-width: 20rem;
+}
+
+#mapa path.fill-1 {
+  fill: rgba(10, 135, 5, 0.325);
+}
+#mapa path.fill-2 {
+  fill: rgba(10, 135, 5, 0.5);
+}
+#mapa path.fill-3 {
+  fill: rgba(10, 135, 5, 0.625);
+}
+#mapa path.fill-4 {
+  fill: rgba(10, 135, 5, 0.75);
+}
+#mapa path.fill-5 {
+  fill: rgba(10, 135, 5, 0.875);
+}
+#mapa path.fill-6 {
+  fill: rgba(10, 135, 5, 1);
+}
