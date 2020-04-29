@@ -10,7 +10,6 @@
         <h2 class="display-1"><%= result.confirmed %></h2>
         <h3 class="lead">Casos Confirmados</h3>
       </div>
-
       <div class="col-md-6 mt-5 mt-md-0">
         <h2 class="display-1"><%= result.deaths %></h2>
         <h3 class="lead">Mortes</h3>
@@ -35,37 +34,45 @@
       <div class="row">
         <div class="col-12 pt-2 justify-content-center">
           <ul class="share-buttons">
-            <li><a
+            <li>
+              <a
                 href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcovidrn.live&quote=Ferramenta%20de%20monitoramento%20do%20avan%C3%A7o%20da%20covid-19%20no%20RN%2C%20de%20potiguares%20para%20potiguares%3A%20http%3A%2F%2Fcovidrn.live"
                 title="Share on Facebook" 
                 target="_blank"
-                ><img 
+              >
+                <img 
                   alt="Share on Facebook"
-                  src="images/flat_web_icon_set/color/Facebook.png" /></a></li>
-            <li><a
+                  src="images/flat_web_icon_set/color/Facebook.png" />
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fcovidrn.live&text=Ferramenta%20de%20monitoramento%20do%20avan%C3%A7o%20da%20covid-19%20no%20RN%2C%20de%20potiguares%20para%20potiguares%3A%20http%3A%2F%2Fcovidrn.live"
-                target="_blank" 
                 title="Tweet"
-                ><img 
+                target="_blank" 
+              >
+                <img 
                   alt="Tweet" 
                   src="images/flat_web_icon_set/color/Twitter.png" 
-                /></a>
+                />
+              </a>
             </li>
-            <li><a href="https://plus.google.com/share?url=http%3A%2F%2Fcovidrn.live" 
-              target="_blank"
+            <li>
+              <a href="https://plus.google.com/share?url=http%3A%2F%2Fcovidrn.live" 
+                target="_blank"
                 title="Share on Google+"
-                ><img 
-                  alt="Share on Google+" 
-                  src="images/flat_web_icon_set/color/Google+.png" 
-                  /></a>
+              >
+                <img alt="Share on Google+" src="images/flat_web_icon_set/color/Google+.png" />
+              </a>
             </li>
-            <li><a
+
+            <li>
+              <a
                 href="http://www.reddit.com/submit?url=http%3A%2F%2Fcovidrn.live&title=Ferramenta%20de%20monitoramento%20do%20avan%C3%A7o%20da%20covid-19%20no%20RN%2C%20de%20potiguares%20para%20potiguares%3A%20http%3A%2F%2Fcovidrn.live"
                 target="_blank" title="Submit to Reddit"
-                ><img 
-                  alt="Submit to Reddit"
-                  src="images/flat_web_icon_set/color/Reddit.png" 
-                /></a>
+                >
+                <img alt="Submit to Reddit" src="images/flat_web_icon_set/color/Reddit.png" />
+              </a>
             </li>
           </ul>
         </div>
@@ -74,35 +81,37 @@
     <%}%> <% }); %>
   </section>
 
+  <%- include("./mapa", {results: data.results}) %>
+
   <section class="container-fluid table-responsive">
-  <div>
-      <table class="table table-md table-striped table-hover text-center" data-toggle="table">
-        <thead class="thead">
-          <th scope="col" id="cidade" data-sortable="true" data-field="cidade">Cidade</th>
-          <th scope="col" id="casos" data-sortable="true" data-field="casos" data-sort-order="desc">Casos Confirmados</th>
-          <th scope="col" id="mortes" data-sortable="true" data-field="mortes" data-sort-order="desc">Mortes</th>
-          <th scope="col" class="d-none d-md-table-cell" id="mortalidade" data-sortable="true" data-field="mortalidade" data-sort-order="desc">Taxa de Mortalidade (%)</th>
-        </thead>
-        <tbody>
-          <% data.results.forEach(function (result){ %> <% if(result.place_type
-          === "city"){ %>
-          <tr>
-            <td><%= result.city %></td>
-            <td><%= result.confirmed %></td>
-            <td><%= result.deaths %></td>
-            <td>
-              <% if(!result.death_rate){%>
-                  0
-              <% }else{ %>
-                <%= Math.round(result.death_rate * 10000) / 100 %>
-              <% } %>
-            </td>
-          </tr>
-          <% } %> <% }); %>
-        </tbody>
-      </table>
-    </div>
-  </section>
+    <div>
+        <table class="table table-md table-striped table-hover text-center" data-toggle="table">
+          <thead class="thead">
+            <th scope="col" id="cidade" data-sortable="true" data-field="cidade">Cidade</th>
+            <th scope="col" id="casos" data-sortable="true" data-field="casos" data-sort-order="desc">Casos Confirmados</th>
+            <th scope="col" id="mortes" data-sortable="true" data-field="mortes" data-sort-order="desc">Mortes</th>
+            <th scope="col" class="d-none d-md-table-cell" id="mortalidade" data-sortable="true" data-field="mortalidade" data-sort-order="desc">Taxa de Mortalidade (%)</th>
+          </thead>
+          <tbody>
+            <% data.results.forEach(function (result){ %> <% if(result.place_type
+            === "city"){ %>
+            <tr>
+              <td><%= result.city %></td>
+              <td><%= result.confirmed %></td>
+              <td><%= result.deaths %></td>
+              <td>
+                <% if(!result.death_rate){%>
+                    0
+                <% }else{ %>
+                  <%= Math.round(result.death_rate * 10000) / 100 %>
+                <% } %>
+              </td>
+            </tr>
+            <% } %> <% }); %>
+          </tbody>
+        </table>
+      </div>
+    </section>
 </main>
 
 <%- include("../partials/footer") %> <%- include("../partials/scripts") %>
