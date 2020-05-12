@@ -25,13 +25,10 @@ router.get('/inicio', (req, res) => {
             className = 'fill-2';
           else if(confirmed >= 100 && confirmed < 150)
             className = 'fill-3';
-          else if(confirmed >= 150 && confirmed < 200)
+          else if(confirmed >= 150 && confirmed < 400)
             className = 'fill-4';
-          else if(confirmed >= 200 && confirmed < 400)
+          else if(confirmed >= 400)
             className = 'fill-5';
-          else if(confirmed >= 400 && confirmed < 800)
-            className = 'fill-6';
-
 
           return {...result, className};
         });
