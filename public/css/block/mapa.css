@@ -1,31 +1,31 @@
-
-#mapa{
-  width: 80%;
-  margin: auto;
-}
-
-legend{
+#mapa legend {
   text-decoration: none;
   width: 100%;
 }
-legend ul{
-  display: inline-block;
-  width: 60%;
-  margin: 0 20%;
+
+#mapa legend ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
 }
-legend ul li{
-  display: inline-block;
-  margin: 0 5px;
+
+#mapa legend ul li {
+  align-items: center;
+  display: flex;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0px .625rem;
 }
-legend ul li p{
-  font-size: 0.5em;
-  display: inline-block;;
-}
-.caixa-colorida{
-  display: inline-block;
-  width: 0.5em;
-  height: 0.5em;
-  margin-right: 5px;
+
+.caixa-colorida {
+  display: block;
+  height: 0.75rem;
+  margin-right: .25rem;
+  width: 0.75rem;
 }
 
 #mapa svg {
@@ -49,21 +49,34 @@ legend ul li p{
   stroke-opacity: 1;
   stroke-width: 20rem;
 }
-#mapa path.fill-1 {
-  fill: rgba(10, 135, 5, 0.325);
+#mapa .fill-1 {
+  background-color: rgba(10, 135, 5, 0.375);
+  fill: rgba(10, 135, 5, 0.375);
 }
-#mapa path.fill-2 {
-  fill: rgba(10, 135, 5, 0.5);
+#mapa .fill-2 {
+  background-color: rgba(10, 135, 5, 0.55);
+  fill: rgba(10, 135, 5, 0.55);
 }
-#mapa path.fill-3 {
-  fill: rgba(10, 135, 5, 0.625);
+#mapa .fill-3 {
+  background-color: rgba(10, 135, 5, 0.7);
+  fill: rgba(10, 135, 5, 0.7);
 }
-#mapa path.fill-4 {
-  fill: rgba(10, 135, 5, 0.75);
-}
-#mapa path.fill-5 {
+#mapa .fill-4 {
+  background-color: rgba(10, 135, 5, 0.875);
   fill: rgba(10, 135, 5, 0.875);
 }
-#mapa path.fill-6 {
+#mapa .fill-5 {
+  background-color: rgba(10, 135, 5, 1);
   fill: rgba(10, 135, 5, 1);
+}
+
+#mapa #message {
+  background-color: rgba(0, 0, 0, .5);
+  border-radius: .25rem;
+  color: #fff;
+  font-size: .75rem;
+  left: -200%;
+  padding: .25rem .5rem;
+  position: absolute;
+  z-index: 25;
 }
