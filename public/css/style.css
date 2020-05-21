@@ -91,26 +91,30 @@ ul.share-buttons .sr-only{
   overflow: hidden;
 }
 
-.sobre-btn {
-	margin: 5px;
-}
-
 #descricao, 
 #autores, 
 #contato {
 	padding: 7% 8%;
 }
 
-#descricao, 
-#contato{
+#descricao, #autores{
 	color: #FFF;
-	line-height: 2;
 }
 
 #descricao {
 	background-color: #119822;
+	line-height: 2;
 }
 
-#contato{
+#autores{
 	background-color: #424342;
+}
+
+.title {
+	font-size: 2.5rem;
+	line-height: 2;
+}
+
+.sobre-btn {
+	margin: 5px;
 }
