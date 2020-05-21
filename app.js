@@ -1,8 +1,10 @@
-const express   = require("express"),
-      app       = express(),
-      index     = require("./routes/index");
+const express     = require("express"),
+      app         = express(),
+      bodyParser  = require("body-parser"),
+      index       = require("./routes/index");
 
 app.set("view engine", "ejs");
+app.use(bodyParser.urlencoded({extended:true}));
 
 //Static Folders
 app.use(express.static("./public"));

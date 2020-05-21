@@ -1,7 +1,18 @@
 const express = require('express'),
       router  = express.Router({ mergeParams: true }),
       request = require('request'),
-      twitter = require('../twitter/twitter-consumer');
+      twitter = require('../twitter/twitter-consumer'),
+      mailer = require("nodemailer");
+
+let transporter = mailer.createTransport({
+    host: process.env.EHOST,
+    port: process.env.EPORT,
+    secure: false,
+    auth: {
+        user: process.env.EUSER,
+        pass: process.env.EPASSWD
+    }
+});
 
 router.get('/', (req, res) => {
   res.redirect('/inicio');
@@ -68,6 +79,18 @@ router.get('/noticias', (req, res) => {
 
 router.get('/sobre', (req, res) => {
   res.render('pages/sobre');
+});
+
+router.post('/contato', (req, res) => {
+  let nome = req.body.contato.nome + " " + req.body.contato.snome;
+  let email = "<" + req.body.contato.email + ">";
+  transporter.sendMail({
+    from: nome + email,
+    to: process.env.ELIST,
+    subject: req.body.contato.assunto,
+    text: req.body.contato.mensagem + "\nDe: "+ nome + " " + email
+  }); 
+  res.redirect("back");
 });
 
 router.get('*', (req, res) => {
