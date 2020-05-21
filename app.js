@@ -1,6 +1,5 @@
 const express   = require("express"),
       app       = express(),
-      noticias  = require("./routes/noticias"),
       index     = require("./routes/index");
 
 app.set("view engine", "ejs");
