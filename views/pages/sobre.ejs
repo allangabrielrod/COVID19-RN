@@ -12,7 +12,7 @@
         Covid19-RN é uma iniciativa de alunos do curso de Informática do IFRN - Campus São Gonçalo do Amarante, que exibe o números de casos confirmados, e de óbitos pelo COVID-19 por municipio, de forma simples e direta. A ferramenta é software livre e o código fonte está hospedado no <a href = "https://github.com/allangabrielrod/COVID19-RN"> Github.</a>
       </p>
       <div class="row justify-content-center">
-        <a href="https://github.com/allangabrielrod/COVID19-RN" class="btn btn-lg btn-dark sobre-btn">
+        <a href="https://github.com/allangabrielrod/COVID19-RN" target="_blank" class="btn btn-lg btn-dark sobre-btn">
           <span class="fab fa-github"></span>
           Contribua
         </a>
@@ -23,7 +23,6 @@
       </div>
     </div>
   </section>
-  
   <section id="autores">
     <div class="container-fluid">
         <h2>Autores</h2>
@@ -121,35 +120,41 @@
 
       <section id="contato">
         <div class="container-fluid">
-          <h2>Fale Conosco</h2>
-          <form action="">
-            <div class="row">
-              <div class="col-6">
-                <div class="form-group">
-                  <label for="nome">Nome</label>
-                  <input type="text" id="nome" class="form-control" name="contato[nome]" required>
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <h2>Fale Conosco</h2>
+    
+              <form action="/contato" method="POST">
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="nome">Nome</label>
+                      <input type="text" id="nome" class="form-control" name="contato[nome]" required>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="snome">Sobrenome</label>
+                      <input type="text" id="snome" class="form-control" name="contato[snome]" required>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="col-6">
                 <div class="form-group">
-                  <label for="snome">Sobrenome</label>
-                  <input type="text" id="snome" class="form-control" name="contato[snome]" required>
+                  <label for="email">Email</label>
+                  <input type="email" id="email" class="form-control" name="contato[email]" required>
                 </div>
-              </div>
+                <div class="form-group">
+                  <label for="assunto">Assunto</label>
+                  <input type="text" id="assunto" class="form-control" name="contato[assunto]" required>
+                </div>
+                <div class="form-group">
+                  <label for="mensagem">Mensagem</label>
+                  <textarea class="form-control" name="contato[mensagem]" id="" cols="30" rows="10" required></textarea>
+                </div>
+                <input type="submit" class="btn btn-success" value="Enviar">
+              </form>
             </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" class="form-control" name="contato[email]" required>
-            </div>
-            <div class="form-group">
-              <label for="mensagem">Mensagem</label>
-              <textarea class="form-control" name="contato[mensagem]" id="" cols="30" rows="10" required></textarea>
-            </div>
-  
-  
-            <input type="submit" class="btn btn-success" value="Enviar">
-          </form>
-
+          </div>
         </div>
       </section>
     </div>
