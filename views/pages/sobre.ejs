@@ -1,24 +1,158 @@
 <%- include("../partials/header", {title: "Noticias"}) %>
-<div class="jumbotron text-center">
+<div class="jumbotron mb-0 text-center">
   <h1>Sobre</h1>
 </div>
 
 <!--Colocar aqui o conteúdo-->
-<main class="jumbotron rounded-0 text-center align-middle bg-light m-auto">
-  <div style = "width: 60%; margin:0 auto">
-    <h2 style="margin-bottom: 2rem;">O Projeto</h2>
-    <p>Com o propósito de monitorar o avanço do novo coronavirus no RN, o
-      Covid19-RN é uma iniciativa de alunos do curso de Informática do IFRN - Campus São Gonçalo do Amarante, que exibe o números de casos confirmados, e de óbitos pelo COVID-19 por municipio, de forma simples e direta. A ferramenta é software livre e o código fonte está hospedado no <a href = "https://github.com/allangabrielrod/COVID19-RN"> Github.</a>
-    <p>Autores: <a href = "https://github.com/allangabrielrod" target="_blank" style="text-decoration: underline;">Allan Gabriel</a>, <a href = "https://github.com/jhonatacaiob" style="text-decoration: underline;">Jhonata Caio</a></p>
-      
-    <p>Orientador: <a href = "https://github.com/marmundo" target="_blank" style="text-decoration: underline;">Marcelo Damasceno</a></p>
-      
-    <p>Fale conosco: </br>
-      Email: covidrn@outlook.com</br>
-      Twitter: <a href = "https://twitter.com/covidrn" target="_blank">@covidrn</a>
-    </p>
-    <p><a href = "https://github.com/allangabrielrod/COVID19-RN/graphs/contributors" target="_blank" style="text-decoration: underline;">Contribuidores</a></p>
-  </div>
+<main id="sobre">
+  <section id="descricao">
+    <div class="container-fluid">
+      <h2>O Projeto</h2>
+      <p>Com o propósito de monitorar o avanço do novo coronavirus no RN, o
+        Covid19-RN é uma iniciativa de alunos do curso de Informática do IFRN - Campus São Gonçalo do Amarante, que exibe o números de casos confirmados, e de óbitos pelo COVID-19 por municipio, de forma simples e direta. A ferramenta é software livre e o código fonte está hospedado no <a href = "https://github.com/allangabrielrod/COVID19-RN"> Github.</a>
+      </p>
+      <div class="row justify-content-center">
+        <a href="https://github.com/allangabrielrod/COVID19-RN" class="btn btn-lg btn-dark sobre-btn">
+          <span class="fab fa-github"></span>
+          Contribua
+        </a>
+        <a href="#contato" class="btn btn-lg btn-primary sobre-btn">
+          <span class="fab fa-envelope"></span>
+          Contato
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <section id="autores">
+    <div class="container-fluid">
+        <h2>Autores</h2>
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-md-5">
+                  <img
+                    src="https://avatars3.githubusercontent.com/u/28847620?s=460&u=c8b9d4de40ab70a62fc8af6be9baccdc51296582&v=4"
+                    class="card-img" alt="...">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h5 class="card-title">Allan Gabriel</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      <span class="fab fa-github"></span> 
+                      <a href="https://github.com/allangabrielrod">
+                        allangabrielrod
+                      </a> 
+                    </h6>
+                    <p class="card-text">
+                      <span class="far fa-envelope"></span>
+                      <a href="mailto:allan.gabriel@protonmail.com">allan.gabriel@protonmail.com</a>
+                    </p>
+                    <p class="card-text">
+                        Aluno do 4 ano do curso Tecnico em Informática no Instituto Federal do Rio Grande do Norte.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-md-5">
+                  <img
+                    src="https://avatars2.githubusercontent.com/u/34169712?s=460&u=6f653ed0c303e8d1a87715dec31c4da89464ee10&v=4"
+                    class="card-img" alt="...">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h5 class="card-title">Jhonata Caio</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      <span class="fab fa-github"></span> 
+                      <a href="https://github.com/jhonatacaiob">
+                        jhonatacaiob
+                      </a> 
+                    </h6>
+                    <p class="card-text">
+                      <span class="far fa-envelope"></span>
+                      <a href="mailto:jhonatacaiob@gmail.com">jhonatacaiob@gmail.com</a>
+                    </p>
+                    <p class="card-text">
+                      Sou um estudante de informatica no Instituto Federal do Rio Grande do Norte.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <div class="row no-gutters">
+                <div class="col-md-5">
+                  <img src="https://avatars2.githubusercontent.com/u/854584?s=460&u=b766ceb230aa96ca823605fbcee788b46f0577f7&v=4"
+                    class="card-img" alt="...">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h5 class="card-title">Marcelo Damasceno (Orientador)</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      <span class="fab fa-github"></span>
+                      <a href="https://github.com/marmundo">
+                        marmundo
+                      </a>
+                    </h6>
+                    <p class="card-text">
+                      <span class="far fa-envelope"></span>
+                      <a href="mailto:marcelodamasceno@gmail.com">marcelodamasceno@gmail.com</a>
+                    </p>
+                    <p class="card-text">
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato">
+        <div class="container-fluid">
+          <h2>Fale Conosco</h2>
+          <form action="">
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="nome">Nome</label>
+                  <input type="text" id="nome" class="form-control" name="contato[nome]" required>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="snome">Sobrenome</label>
+                  <input type="text" id="snome" class="form-control" name="contato[snome]" required>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" class="form-control" name="contato[email]" required>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea class="form-control" name="contato[mensagem]" id="" cols="30" rows="10" required></textarea>
+            </div>
+  
+  
+            <input type="submit" class="btn btn-success" value="Enviar">
+          </form>
+
+        </div>
+      </section>
+    </div>
 </main>
 
 <%- include("../partials/footer") %> <%- include("../partials/scripts") %> 

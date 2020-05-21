@@ -11,7 +11,7 @@ body,
 input,
 button,
 textarea {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', fontawesome, sans-serif;
 }
 
 main {
@@ -89,4 +89,28 @@ ul.share-buttons .sr-only{
   height: 1px;
   width: 1px;
   overflow: hidden;
+}
+
+.sobre-btn {
+	margin: 5px;
+}
+
+#descricao, 
+#autores, 
+#contato {
+	padding: 7% 8%;
+}
+
+#descricao, 
+#contato{
+	color: #FFF;
+	line-height: 2;
+}
+
+#descricao {
+	background-color: #119822;
+}
+
+#contato{
+	background-color: #424342;
 }
