@@ -1,7 +1,7 @@
 const express = require('express'),
-  router = express.Router({ mergeParams: true }),
-  request = require('request'),
-  twitter = require('../twitter/twitter-consumer');
+      router  = express.Router({ mergeParams: true }),
+      request = require('request'),
+      twitter = require('../twitter/twitter-consumer');
 
 router.get('/', (req, res) => {
   res.redirect('/inicio');
