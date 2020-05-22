@@ -11,7 +11,7 @@ body,
 input,
 button,
 textarea {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', fontawesome, sans-serif;
 }
 
 main {
@@ -89,4 +89,40 @@ ul.share-buttons .sr-only{
   height: 1px;
   width: 1px;
   overflow: hidden;
+}
+
+#descricao, 
+#autores, 
+#contato {
+	padding: 7% 10%;
+}
+
+#descricao, #contato {
+	color: #FFF;
+}
+
+#descricao {
+	background-color: #119822;
+	line-height: 2;
+}
+
+#contato {
+	background-color: #424342;
+}
+
+.title {
+	font-size: 2.5rem;
+	line-height: 2;
+}
+
+.sobre-btn {
+	margin: 0 5px;
+}
+
+.cards {
+	padding: 0 7.5px;
+}
+
+.cards .col-md-6 {
+	padding: 7.5px;
 }
