@@ -2,10 +2,10 @@ var Twit = require("twit"); // this is how we import the twit package
 var moment = require("moment");
 // var config = require(); //this is we import the config file which is a js file which contains the keys ans tokens
 var T = new Twit({
-  consumer_key: "QY7MSari48vis6baRBt6eEbTT",
-  consumer_secret: "A9aDa0ztStrzg6lqgPMIOvX2oLnprHMepRJACAA7h6ikg8OwrE",
-  access_token: "65379359-xQjgUyPbI3GCo7T0ReUhchU7lkvDRPWJnFWviyEK9",
-  access_token_secret: "Y3CwQgP3fCCj1uSgysYY4CwthibSPtXibOyVJTbEnLxw7",
+  consumer_key: process.env.consumer_key,
+  consumer_secret: process.env.consumer_secret,
+  access_token: process.env.access_token,
+  access_token_secret: process.env.access_token_secret,
   timeout_ms: 60 * 1000,
   strictSSL: true,
 }); //this is the object of twit which will help us to call functions inside it
